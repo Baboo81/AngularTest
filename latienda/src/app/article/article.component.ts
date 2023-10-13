@@ -29,8 +29,7 @@ comment: string = "Ceci est un commentaire";
 
   //Code de l'event click:    
   onLike() {
-    this.totalNbLike++;
-    this.info.emit(this.titreArticle);
+    if (this.)
   }
 
   //Fct qui permet de changer la couleur du txt:

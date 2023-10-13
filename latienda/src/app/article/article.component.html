@@ -9,7 +9,9 @@
         <h6 class="card-title"> {{ prixArticle }} &euro;</h6>
         <p class="card-text"> {{ description }} </p>
 
-        <button class="btn btn-primary" (click)="onLike()">Me gusta</button>
+        <button>Me gusta</button>
+        <button class="noLike">No me gusta</button>
+        <!--<button class="btn btn-primary" (click)="onLike()">Me gusta</button>-->
         <p>Nb like : {{ totalNbLike }} </p>
 
         <!--Two-way binding va permettre de renvoyer des infos vers le TypeScript-->
