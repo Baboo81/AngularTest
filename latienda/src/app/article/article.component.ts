@@ -18,6 +18,7 @@ comment: string = "Ceci est un commentaire";
 @Input() urlImg: string;
 @Input() textAltImg: string;
 @Input() dispo: boolean;
+jaime: boolean = true;
 
 //Permet de transmettre des infos vers le parent:
 @Output() info = new EventEmitter<string>();
@@ -29,7 +30,14 @@ comment: string = "Ceci est un commentaire";
 
   //Code de l'event click:    
   onLike() {
-    if (this.)
+    if (this.jaime === true) {
+      this.totalNbLike++;
+      this.jaime = false;
+    } else {
+      this.totalNbLike--;
+      this.jaime = true;
+    }
+    this.info.emit(this.titreArticle);
   }
 
   //Fct qui permet de changer la couleur du txt:
