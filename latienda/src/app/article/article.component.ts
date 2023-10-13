@@ -33,4 +33,13 @@ comment: string = "Ceci est un commentaire";
     this.info.emit(this.titreArticle);
   }
 
+  //Fct qui permet de changer la couleur du txt:
+  getColor() {
+    if (this.dispo === true) {
+        return "green"
+    } else {
+        return "red"
+    }
+  }
+
 }

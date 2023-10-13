@@ -31,34 +31,17 @@
     </p>
   </div>
   <div id="home">
-    <app-article 
-      [titreArticle]=" 'Vélo' " 
-      [prixArticle]="80" 
-      [description]=" 'Un VTT' "
-      [urlImg]="'../assets/img/velo.jpg'"
-      [textAltImg]="'Un vélo Scott'"
-      [dispo]="false"
-      (info)="onAffiche($event)">
-    </app-article>
 
     <app-article 
-      [titreArticle]=" 'TV' " 
-      [prixArticle]="230" 
-      [description]=" 'Une Excellente résolution' "
-      [urlImg]="'../assets/img/tv.jpg'"
-      [textAltImg]="'TV Sony'"
-      [dispo]="true"
+      *ngFor = "let element of liste"
+      [titreArticle]="element.titreArticle" 
+      [prixArticle]="element.prixArticle" 
+      [description]="element.description"
+      [urlImg]="element.urlImg"
+      [textAltImg]="element.textAltImg"
+      [dispo]="element.dispo"
       (info)="onAffiche($event)">
     </app-article>
-
-    <app-article 
-      [titreArticle]=" 'Jouet' " 
-      [prixArticle]="15" 
-      [description]=" 'Jouets en bois' "
-      [urlImg]="'../assets/img/jouets.jpg'"
-      [textAltImg]="'Jouets de luxe'"
-      [dispo]="true"
-      (info)="onAffiche($event)"></app-article>
   </div>
 </div>
 

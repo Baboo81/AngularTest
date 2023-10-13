@@ -2,7 +2,7 @@
     <!--Property binding permet de récupérer grâce aux crochets les val contenues ds article.comp.ts pr: src et alt-->
     <img [src]="urlImg" [alt]="textAltImg">
     <div class="card-body">
-        <h5 class="card-title"> 
+        <h5 class="card-title" [ngStyle]="{ color : getColor()}"> 
             {{ titreArticle }} 
             <span *ngIf="dispo === false"> - Indisponible</span>
         </h5>
