@@ -31,9 +31,34 @@
     </p>
   </div>
   <div id="home">
-    <app-article [titreArticle]=" 'Vélo' " [prixArticle]="prix1" (info)="onAffiche($event)"></app-article>
-    <app-article [titreArticle]=" 'TV' " [prixArticle]="prix2" (info)="onAffiche($event)"></app-article>
-    <app-article [titreArticle]=" 'Jouet' " [prixArticle]="prix3" (info)="onAffiche($event)"></app-article>
+    <app-article 
+      [titreArticle]=" 'Vélo' " 
+      [prixArticle]="80" 
+      [description]=" 'Un VTT' "
+      [urlImg]="'../assets/img/velo.jpg'"
+      [textAltImg]="'Un vélo Scott'"
+      [dispo]="false"
+      (info)="onAffiche($event)">
+    </app-article>
+
+    <app-article 
+      [titreArticle]=" 'TV' " 
+      [prixArticle]="230" 
+      [description]=" 'Une Excellente résolution' "
+      [urlImg]="'../assets/img/tv.jpg'"
+      [textAltImg]="'TV Sony'"
+      [dispo]="true"
+      (info)="onAffiche($event)">
+    </app-article>
+
+    <app-article 
+      [titreArticle]=" 'Jouet' " 
+      [prixArticle]="15" 
+      [description]=" 'Jouets en bois' "
+      [urlImg]="'../assets/img/jouets.jpg'"
+      [textAltImg]="'Jouets de luxe'"
+      [dispo]="true"
+      (info)="onAffiche($event)"></app-article>
   </div>
 </div>
 

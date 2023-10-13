@@ -1,10 +1,13 @@
 <div class="card articleInfo">
     <!--Property binding permet de récupérer grâce aux crochets les val contenues ds article.comp.ts pr: src et alt-->
     <img [src]="urlImg" [alt]="textAltImg">
-    <div>
-        <h5 class="card-title"> {{ titreArticle }} </h5>
+    <div class="card-body">
+        <h5 class="card-title"> 
+            {{ titreArticle }} 
+            <span *ngIf="dispo === false"> - Indisponible</span>
+        </h5>
         <h6 class="card-title"> {{ prixArticle }} &euro;</h6>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, quidem!</p>
+        <p class="card-text"> {{ description }} </p>
 
         <button class="btn btn-primary" (click)="onLike()">Me gusta</button>
         <p>Nb like : {{ totalNbLike }} </p>
