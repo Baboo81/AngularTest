@@ -24,8 +24,17 @@
   <p> <!--{{ secondes }}--> </p>
 </div>
 
-<div id="home" class="container">
-  <app-article></app-article>
+<div class="container">
+  <div id="alertMsg">
+    <p>
+      {{ message }}
+    </p>
+  </div>
+  <div id="home">
+    <app-article [titreArticle]=" 'Vélo' " [prixArticle]="prix1" (info)="onAffiche($event)"></app-article>
+    <app-article [titreArticle]=" 'TV' " [prixArticle]="prix2" (info)="onAffiche($event)"></app-article>
+    <app-article [titreArticle]=" 'Jouet' " [prixArticle]="prix3" (info)="onAffiche($event)"></app-article>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
