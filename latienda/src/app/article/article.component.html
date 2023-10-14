@@ -9,6 +9,9 @@
         <h6 class="card-title"> {{ prixArticle }} &euro;</h6>
         <p class="card-text"> {{ description }} </p>
 
+        <!--Routage-->
+        <a routerLink="/details/ {{ idArticle }}"> => Voir l'article</a>
+
         <button 
             (click)="onLike()"
             [ngClass]=" {

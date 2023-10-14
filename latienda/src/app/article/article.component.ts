@@ -18,6 +18,7 @@ comment: string = "Ceci est un commentaire";
 @Input() urlImg: string;
 @Input() textAltImg: string;
 @Input() dispo: boolean;
+@Input() idArticle: number;
 jaime: boolean = true;
 
 //Permet de transmettre des infos vers le parent:

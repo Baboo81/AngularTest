@@ -8,13 +8,15 @@ import { ArticleComponent } from './article/article.component';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
 import { ListeComponent } from './liste/liste.component';
+import { DetailsComponent } from './details/details.component';
 
 //App module.ts permet de regrouper des components
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
-    ListeComponent
+    ListeComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

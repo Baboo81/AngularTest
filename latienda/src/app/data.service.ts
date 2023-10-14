@@ -7,6 +7,7 @@ export class DataService {
 
   listeArticles = [
     {
+      id: 1,
       titreArticle: "vélo",
       prixArticle: 80,
       description: "Un VTT",
@@ -15,6 +16,7 @@ export class DataService {
       dispo: false
     },
     {
+      id: 2,
       titreArticle: "TV",
       prixArticle: 230,
       description: "Excellente résolution",
@@ -23,6 +25,7 @@ export class DataService {
       dispo: true
     },
     {
+      id: 3,
       titreArticle: "jouets",
       prixArticle: 15,
       description: "Jouets en bois",
@@ -33,4 +36,12 @@ export class DataService {
   ]
 
   constructor() { }
+
+  //fct qui récupère un objet du [] en fct de son id:
+  getArticle(id: number) {
+    const articles = this.listeArticles.find((a) => {
+      return a.id == id;
+    });
+    return articles;
+  }
 }
