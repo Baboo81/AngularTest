@@ -9,9 +9,24 @@
         <h6 class="card-title"> {{ prixArticle }} &euro;</h6>
         <p class="card-text"> {{ description }} </p>
 
-        <button>Me gusta</button>
-        <button class="noLike">No me gusta</button>
+        <button 
+            (click)="onLike()"
+            [ngClass]=" {
+                'show' : jaime === true,
+                'hidden' : jaime === false
+            } "
+        >Me gusta</button>
+        <button 
+            (click)="onLike()" 
+            class="noLike"
+            [ngClass]=" {
+                'show' : jaime === false,
+                'hidden' : jaime === true
+            } "
+        >No me gusta</button>
+
         <!--<button class="btn btn-primary" (click)="onLike()">Me gusta</button>-->
+
         <p>Nb like : {{ totalNbLike }} </p>
 
         <!--Two-way binding va permettre de renvoyer des infos vers le TypeScript-->
