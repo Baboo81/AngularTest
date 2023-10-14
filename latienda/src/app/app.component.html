@@ -24,27 +24,8 @@
   <p> <!--{{ secondes }}--> </p>
 </div>
 
-<div class="container">
-  <div id="alertMsg">
-    <p>
-      {{ message }}
-    </p>
-  </div>
-  <div id="home">
 
-    <app-article 
-      *ngFor = "let element of liste"
-      [titreArticle]="element.titreArticle" 
-      [prixArticle]="element.prixArticle" 
-      [description]="element.description"
-      [urlImg]="element.urlImg"
-      [textAltImg]="element.textAltImg"
-      [dispo]="element.dispo"
-      (info)="onAffiche($event)">
-    </app-article>
-  </div>
-</div>
-
+<!--La balise indique que le composant doit s'ouvrir à cet endroit précis-->
 <router-outlet></router-outlet>
 
 <!-- Pied de page -->

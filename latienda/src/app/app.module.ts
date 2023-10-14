@@ -6,19 +6,22 @@ import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 //Pour récupérer les données d'un form:
 import { FormsModule } from '@angular/forms';
+import { DataService } from './data.service';
+import { ListeComponent } from './liste/liste.component';
 
 //App module.ts permet de regrouper des components
 @NgModule({
   declarations: [
     AppComponent,
-    ArticleComponent
+    ArticleComponent,
+    ListeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
