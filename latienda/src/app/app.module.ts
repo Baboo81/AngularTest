@@ -11,6 +11,7 @@ import { ListeComponent } from './liste/liste.component';
 import { DetailsComponent } from './details/details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AjouterComponent } from './ajouter/ajouter.component';
+import { HttpClientModule } from '@angular/common/http';
 
 //App module.ts permet de regrouper des components
 @NgModule({
@@ -25,7 +26,8 @@ import { AjouterComponent } from './ajouter/ajouter.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
